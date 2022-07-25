@@ -55,5 +55,24 @@ int main()
 
     //Language growth
 
+    //This book and C++ standards
+
+    //The mechanics of creating a Program
+
+    //Creating the Source Code File
+
+    //Compilation and Linking
+
+    //Unix Compiling and Linking
+
+    //Linux Compiling and Linking
+
+    //Command-Line Compilers for Windows Command Prompt Mode
+
+    //Windows Compilers
+    std::cin.get(); // if you want to keep window open... 
+
+    //C++ on the Macinstosh
+
     return 0;
 }
