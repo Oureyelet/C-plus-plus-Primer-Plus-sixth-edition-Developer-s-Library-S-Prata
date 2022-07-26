@@ -5,7 +5,6 @@
 
 //Function prototypes:
 int sqrt(int);
-double my_sqrt(double);
 
 int main()
 {
@@ -112,27 +111,7 @@ int main()
     q = sqrt(6.25);         // returns the value 2.5 and assigns it to q
     std::cout << q << '\n'; // print 2.5
 
-    double f1;
-    f1 = my_sqrt(6.25);
-    std::cout << q << '\n'; // print 2.5 ?
-
 
     std::cin.get();
     return 0;
-}
-
-double my_sqrt(double x)
-{
-    double y;
-
-    for(double count{ 2 }; count < x; ++x)
-    {
-        y = count * count;
-
-        if(y == x)
-        {
-            return count;
-        }
-    }
-    return 1;
 }
