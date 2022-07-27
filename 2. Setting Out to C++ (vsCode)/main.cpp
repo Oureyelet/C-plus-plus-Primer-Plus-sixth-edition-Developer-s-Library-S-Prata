@@ -1,10 +1,18 @@
-#include <iostream>     // input & output
-#include "example.h"    // header files
-#include <stdio.h>      // for printf in C
-#include <cmath>        // for sqrt() function
+// Chapter 2 -- Setting Out to C++
+
+#include <iostream>     // input & output.
+#include "example.h"    // header files.
+#include <stdio.h>      // for printf in C.
+#include <cmath>        // for sqrt() function.
+#include <cstdlib>      // for rand() function.
+#include <string>       // for find(), substr() functions
+#include <sstream>      // for std::stringstream class
 
 //Function prototypes:
-int sqrt(int);
+int sqrt(int);              // prototype of a function with one arguments.
+double pow(double, double); // prototype of a function with two arguments.
+int rand(void);             // prototype of a function that take no arguments.
+void bucks(double);         // prototype for function with no return value.
 
 int main()
 {
@@ -89,9 +97,11 @@ int main()
     //A New Trick for std::cout
     printf("Printing a string: %s\n", "25"); //C's multipurpose output function prinf();
     printf("Printing an integer: %d\n", 25); //C's multipurpose output function prinf();
+        
         //std::cout and printf()
 
     //More C++ Statement: please go see our 'Listing 2.3 getinfo.cpp' file...
+        
         //Program Adjustments:
 
     //Using std::cin:
@@ -110,8 +120,41 @@ int main()
     double q;               // declare q as a type double variable
     q = sqrt(6.25);         // returns the value 2.5 and assigns it to q
     std::cout << q << '\n'; // print 2.5
+        
+        //Using Library Functions:
 
+    //Fnction Variations:
+    double answer{ pow(5.0, 8.0) }; // function call with a list of arguments
+
+    std::cout << "5 to the eight power is: " << answer << '\n';
+
+    bucks(23);
 
     std::cin.get();
     return 0;
+}
+
+/*
+This function is 
+bucks function displed a number in dollars-and-cents format. For example, suppose you wrote a function that displayed
+*/
+void bucks(double money)
+{
+    float i = money;
+    std::string s;
+    std::string t;
+    std::stringstream out;
+    out << i;
+    s = out.str();
+
+    t = s.substr(s.find(".")+1);
+    // std::cout<<"number of decimal places: " << t.length();
+
+    if(t.length() > 2)
+        std::cout << "Are you sure is money value ? :)\n";
+    if(t.length() == 2)
+        std::cout << '$' << money << std::endl;
+    if(t.length() == 1)
+        std::cout << '$' << money << '0' <<std::endl;
+
 }
