@@ -128,15 +128,33 @@ int main()
 
     std::cout << "5 to the eight power is: " << answer << '\n';
 
-    bucks(23);
+    /*
+    Bucks() function is for displed a number in dollars-and-cents format. For example, you could send argument of, say, 23.5,
+    and it would display $23.50 on screen.
+    */
+    bucks(23.2); // function call, no return value - pure information call statement.
+
+    //User-Defined Functions: please go see our 'Listing 2.5 ourfunc.cpp' file...
+
+    //Function form:
+
+    //Function Headers:
+        //Review main()'s function header:
+            //Keywords:
+
+    //Using a User-Defined Function That Has a Return Value: see our 'Listing 2.6 conver.cpp' file please.
+    
+
+
 
     std::cin.get();
     return 0;
 }
 
+
 /*
-This function is 
-bucks function displed a number in dollars-and-cents format. For example, suppose you wrote a function that displayed
+Bucks() function is for displed a number in dollars-and-cents format. For example, you could send argument of, say, 23.5,
+and it would display $23.50 on screen.
 */
 void bucks(double money)
 {
@@ -156,5 +174,4 @@ void bucks(double money)
         std::cout << '$' << money << std::endl;
     if(t.length() == 1)
         std::cout << '$' << money << '0' <<std::endl;
-
 }
