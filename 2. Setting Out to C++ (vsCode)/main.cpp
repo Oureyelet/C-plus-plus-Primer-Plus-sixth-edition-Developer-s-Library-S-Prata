@@ -144,6 +144,66 @@ int main()
 
     //Using a User-Defined Function That Has a Return Value: see our 'Listing 2.6 conver.cpp' file please.
     
+    //Placin the 'using' Directive in Multifunction Program:
+        //Naming Conventions:
+
+    //Summary:
+
+    //Chapter Review:
+
+    /*
+        1. What are the modules of C++ programs called?
+            - They are called functions.
+
+        2. What does the following preprocessor directive do?
+        #include <iostream>
+            -By this line we are including <iostream> librry to our file.
+       
+        3. What does the following statement do?
+        using namespace std;
+            -After that statement we dont need to use 'std' namespace eveytime before calling object from std libry.
+
+     
+        4. What statement would you use to print the phrase “Hello, world” and then start a
+        new line?
+            - std::cout << "Hello World" << '\n';
+
+        5. What statement would you use to create an integer variable with the name
+        cheeses?
+            -int cheeses{};
+      
+        6. What statement would you use to assign the value 32 to the variable cheeses?
+            - cheeses = 32;
+
+        7. What statement would you use to read a value from keyboard input into the vari-
+        able cheeses?
+            - std::cin >> cheeses;
+      
+        8. What statement would you use to print “We have X varieties of cheese,” where the
+        current value of the cheeses variable replaces X?
+            - std::cout << "We have " << cheeses << " varieties of cheese.\n";
+      
+        9. What do the following function prototypes tell you about the functions?
+        int froop(double t); - prototype of function - type of this function is int, froop() function take one argument with double type.
+        void rattle(int n); - prototype  for function with no return value - take one argument: type int.
+        int prune(void); - prototype int function with no take argument
+      
+        10. When do you not have to use the keyword return when you define a function?
+            - I dont need to use 'return' keyword everytime when i use void function.
+            - However, you can use it if you don’t give a return value: return;
+      
+        11. Suppose your main() function has the following line:
+        cout << “Please enter your PIN: “;
+        And suppose the compiler complains that cout is an unknown identifier.What is
+        the likely cause of this complaint, and what are three ways to fix the problem?
+            - We need to use 'std::' namespace before 'cout' object.
+            - Or using namespace std;
+    */
+
+    //Programming Exercises:
+    
+
+
 
 
 
