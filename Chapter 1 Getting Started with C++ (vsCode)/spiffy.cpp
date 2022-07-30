@@ -1,3 +1,5 @@
+// spiffy.cpp -- S.Prata C++ Primer Plus 6th ed. Chapter 1 -- Getting Started with C++.
+
 #include <iostream>
 #include <string>
 #include <string_view>

@@ -1,4 +1,4 @@
-// Chapter 2 -- Setting Out to C++
+// main.cpp -- S.Prata C++ Primer Plus 6th ed. Chapter 2 -- Setting Out to C++.
 
 #include <iostream>     // input & output.
 #include "example.h"    // header files.
