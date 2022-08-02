@@ -12,10 +12,13 @@ int main()
     
     std::cout << &braincount << '\n';//& symbol show you addres in memory where braincount value is keep.
 
+
     //Names for Variables:
         //Naming schemes:
 
+
     //Integer Types:
+
 
     //The 'short', 'int', 'long', and 'long long' Integer Types: Please go see 'Listing 3.1 limits.cpp' file
         //Bits and Bytes:
@@ -53,6 +56,7 @@ int main()
         -------------------------------------------------------------
     */
 
+
     //Initialization:
     
     int n_int = INT_MAX;                // set the 'n_int' to the largest possible type int value
@@ -66,7 +70,27 @@ int main()
         //Caution:
 
 
+    //Initialization with C++11:
 
+    int hamburgers = { 24 };    // set hamburger to 24
+    int emus{ 7 };              // set emus to 7
+    int rheas = { 12 };         // set rheas to 12 
+    int rocs = {};              // set rocs to 0
+    int psychics{};             // a universal initializatin syntax (set psychics to 0)
+
+    //----------------
+    //Unsigned Types:   please go see 'Listing 3.2 exceed.cpp' file
+    //----------------
+    unsigned short change{};    // unsigned short type
+    unsigned int rovert{};      // unsigned int type
+    unsigned window{};          // also unsigned int
+    unsigned long gone{};       // unsigned long type
+
+
+    //-------------------------
+    //Choosing an Integer Type:
+    //-------------------------
+    
 
     return 0;
 }
