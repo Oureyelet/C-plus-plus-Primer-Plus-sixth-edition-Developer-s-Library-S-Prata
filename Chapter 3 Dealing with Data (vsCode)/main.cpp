@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <climits> // for preprocesor INT_MAX or sizeof()
+#include <typeinfo> // to get the type of variable
 
 int main()
 {
@@ -92,6 +93,21 @@ int main()
     //-------------------------
     
 
+    //-------------------------
+    //Integer Literals: please go see 'Listing 3.3 hexoct1.cpp' and 'Listing 3.4 hexoct2.cpp' 
+    //-------------------------
+
+
+    //----------------------------------------
+    //How C++ Decides What Type a Constant Is:
+    //----------------------------------------
+
+    std::cout << "Year = " << 1492 << '\n';
+    std::cout << "store as long type = " << 22022L << '\n';
+    std::cout << "store as unsigned long type = " << 22022UL << '\n';
+
+    //std::cout << 220222UL << " is type " << std::typei(220222UL).name() << '\n';
+std::cout << std::type_info(22022UL) << '\n';
     return 0;
 }
 
