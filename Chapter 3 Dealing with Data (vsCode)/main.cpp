@@ -103,11 +103,49 @@ int main()
     //----------------------------------------
 
     std::cout << "Year = " << 1492 << '\n';
-    std::cout << "store as long type = " << 22022L << '\n';
-    std::cout << "store as unsigned long type = " << 22022UL << '\n';
+    std::cout << "This is store as long type = " << 22022L << '\n';
+    std::cout << "This is store as unsigned long type = " << 22022UL << '\n';
 
-    //std::cout << 220222UL << " is type " << std::typei(220222UL).name() << '\n';
-std::cout << std::type_info(22022UL) << '\n';
+
+    /*----------------------------------------------------
+    The 'char' Type - Characters and Small Integers : 
+    -(please go see our 'Listing 3.5 chartype.cpp' file)
+    -(please go see our 'Listing 3.6 morechar.cpp' file)
+    ----------------------------------------------------*/
+    
+    char smaller_than_short{ '7' };
+    std::cout << "Is there something smaller than short (integer) ? - Yes, char: " 
+              << smaller_than_short
+              << '\n';
+
+        //Program Notes:
+        char ch;
+        std::cout << "Enter our char ch please: ";
+        std::cin >> ch;
+        std::cout << ch << '\n';
+
+        int i;
+        std::cout << "Enter our integer 'i' please: ";
+        std::cin >> i;
+        std::cout << i << '\n';
+
+    //--------------------------------------
+    // A Member Function - std::cout.put():
+    //--------------------------------------
+    std::cout << std::endl;
+    std::cout.put('$');
+
+
+    //-----------------
+    // 'char' Literals:
+    //-----------------
+    char alarm{ '\a' };
+    std::cout << alarm << '\n';
+
+    
+
+    std::cin.get();
+    std::cin.get();
     return 0;
 }
 
