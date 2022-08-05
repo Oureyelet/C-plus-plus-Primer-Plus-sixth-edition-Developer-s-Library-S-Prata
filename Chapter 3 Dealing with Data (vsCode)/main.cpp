@@ -139,8 +139,53 @@ int main()
     //-----------------
     // 'char' Literals:
     //-----------------
-    char alarm{ '\a' };
-    std::cout << alarm << '\n';
+    system("(speaker-test -t sine -f 1000)& pid=$!; sleep 1.0s; kill -9 $pid"); //beeps your terminal - alert sound.
+                                                                                // on my computer '/a' not worked.
+
+    /*
+    ---------------------------------------------------------------------
+    Table 3.2 C++ Escape Sequence Codes
+    --------------------------------------------------------------------
+    Newline NL (LF) \n 10 0xA
+    Horizontal tab HT \t 9 0x9
+    Vertical tab VT \v 11 0xB
+    Backspace BS \b 8 0x8
+    Carriage return CR \r 13 0xD
+    Alert BEL \a 7 0x7
+    Backslash \ \\ 92 0x5C
+    Question mark ? \? 63 0x3F
+    Single quote ’ \' 39 0x27
+    Double quote ” \" 34 0x22
+    ---------------------------------------------------------------------
+    */
+
+    // All three of the following move the screen cursor to the beginning of the next line:
+    std::cout << std::endl; // using the std::endl manipulator
+    std::cout << '\n';      // using a character constant
+    std::cout << "\n";      // using a string
+
+    // Here is same output:
+    std::cout << std::endl << std::endl << "What next?" << std::endl << "Enter a number: " << std::endl;
+    std::cout << "\n\nWhat next?\nEnter a number: \n"; 
+
+    std::cout << '\032' << '\n'; // print 26 (ASCII code) -- nothing happen on my computer ? 
+
+
+    //---------------------------
+    // Universal Character Names:
+    //---------------------------
+    int k\u00F6rper; // the ISO 10646 code point for 'ö' is 00F6 so variable name is: körper
+    std::cout << "Let them eat g\u00E2teau.\n"; // print "Let them eat gâteau." beacause ISO 10646 code point for 'â' is 00E2
+
+        // Unicode and ISO 10646:
+
+    
+    //-----------------------------------
+    // 'signed char' and 'unsigned char':
+    //-----------------------------------
+    char fodo;
+    unsigned char bar;
+    singed char snark;
 
     
 
