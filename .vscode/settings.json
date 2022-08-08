@@ -46,7 +46,8 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "ctime": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "climits": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

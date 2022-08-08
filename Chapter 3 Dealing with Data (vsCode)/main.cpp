@@ -257,9 +257,17 @@ int main()
     //-------------------------------------------------------------------------------------------
     // Floating-Point Type (C++ has three floating-point types: float, double, and long double) :
     //-------------------------------------------------------------------------------------------
-    //float.h header file...
-
-
+    // Please go see our 'Listing 3.8 floatnum.cpp' file:
+        // Program Notes:
+            // Reading Include Files:
+    
+    //--------------------------
+    // Floating-Point Constants:
+    //--------------------------
+    double const_one{ 1.234f };         // a float constant 
+    double const_two{ 2.45E20F };       // a float constant
+    double const_three{ 2.34524E28 };   // 
+    double const_four{ 2.2L };
 
 
 
