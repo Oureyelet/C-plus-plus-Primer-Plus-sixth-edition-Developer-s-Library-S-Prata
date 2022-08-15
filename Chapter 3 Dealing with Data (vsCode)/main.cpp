@@ -269,6 +269,29 @@ int main()
     double const_three{ 2.34524E28 };   // 
     double const_four{ 2.2L };
 
+    std::cout << "Here is what you looking for: " <<typeid(const_one).name() << '\n'; // even if this print 'd' which mean double
+                                                                                      // that is stored like a float consant.
+
+
+    //--------------------------------------------------------
+    // Advantages and Disadvantages of Floating-Point Numbers: (Please see Listing 3.9 fltadd.cpp file)
+    //--------------------------------------------------------
+        //Classifying Data Types:
+
+
+    //--------------------------
+    // C++ Arithmetic Operators: (addition, substraction, multiplication, divistion, and taking the modulus)
+    //--------------------------
+    int wheels{ 4 + 3 }; //The values 4 and 2 are operands, the + symbol is the addition operator, and 4 + 2 is an
+                         //expression whose value is 6.
+
+
+    //------------------------------------------------------------
+    // Order of Operation - Operator Precedence and Associativity: (Please see Listing 3.10 arith.cpp file)
+    //------------------------------------------------------------
+    int flyingpigs{ 3 + 4 * 5 }; // 35 or 23?
+    float logs{ 120 / 4 * 5 }; // 150 or 6 ?
+
 
 
     //-----------------------------------------------------------
