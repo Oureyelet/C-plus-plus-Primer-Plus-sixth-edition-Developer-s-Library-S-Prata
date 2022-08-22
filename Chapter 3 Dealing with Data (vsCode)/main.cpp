@@ -294,6 +294,50 @@ int main()
     int dues{ 20 * 5 + 24 * 6 }; // 
 
 
+    //-----------------------------------------------------------------
+    // Division Diversions: (Please see 'Listing 3.11 divide.cpp' file)
+    //-----------------------------------------------------------------
+        // A Glimpse Operator Overloading:
+
+    
+    //-------------------------------------------------------------------------
+    // The Modulus Operator: (Please check our 'Listing 3.12 modulus.cpp' file)
+    //-------------------------------------------------------------------------
+
+
+    
+
+
+    //------------------------------------------------------------------------------------------
+    // Conversion Initialization and Assignment: (Please check our 'Listing 3.13 init.cpp' file)
+    //------------------------------------------------------------------------------------------
+    long so_long{};
+    short thirty{};
+
+    so_long = thirty; // assinging a short to a long
+
+
+    //---------------------------------------------------
+    // Initialization Conversion When {} Are Used (C+11):
+    //---------------------------------------------------
+    const int code{ 66 };
+    int x{ 66 };
+
+    // char c1{ 31325 };   // narrowing, not allowed.
+    char c2 = { 66 };   // allowed beacude char can hold 66
+    char c3{ code };    // ditto
+    // char c4 = { x };    // not allowed, x is not constant
+    x = 31325;
+    char c5 = x;        // allowed by this form of initialization
+
+
+    //----------------------------
+    // Conversions in Expressions:
+    //----------------------------
+    
+
+
+
     //-----------------------------------------------------------
     //check C++ version:
     if (__cplusplus == 201703L) std::cout << "C++17\n";
