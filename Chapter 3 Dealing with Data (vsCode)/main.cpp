@@ -334,7 +334,30 @@ int main()
     //----------------------------
     // Conversions in Expressions:
     //----------------------------
+    short chickens = 20;            // line 1
+    short ducks = 35;               // line 2
+    short fowl = chickens + ducks;  // line 3
+
+
+    //----------------------------------
+    // Conversions in Passing Arguments:
+    //----------------------------------
+
+
+    //--------------------------------------------------------------
+    // Type Cast: (Please check our 'Listing 3.14 typecast.cpp' file)
+    //--------------------------------------------------------------
+    short thorn;
     
+    std::cout << "The intger code for 'Q': ";
+    std::cout << int('Q') << '\n';  // display the intger code for 'Q'
+
+    // static_cast<typeName>(value):
+    long thorn_L{ static_cast<long>(thorn) };   // return a type long conversion of thorn
+
+
+
+
 
 
 
