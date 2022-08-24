@@ -415,23 +415,40 @@ int main()
 
     7. Assigning a long value to a float can result in a rounding error.What about
     assigning long to double? long long to double?
+        - is depend how big value are... ingeneral there is no problem at all.
+
     8. Evaluate the following expressions as C++ would:
-    a. 8 * 9 + 2
-    b. 6 * 3 / 4
-    c. 3 / 4 * 6
-    d. 6.0 * 3 / 4
-    e. 15 % 4
+    a. (8 * 9) + 2 = 74  
+    b. 6 * 3 / 4 = (6 * 3) / 4 = 4 
+    c. (3 / 4) * 6 = 0 
+    d. (6.0 * 3) / 4 = 4.5
+    e. 15 % 4 = 3
+
     9. Suppose x1 and x2 are two type double variables that you want to add as integers
     and assign to an integer variable. Construct a C++ statement for doing so.What if
     you want to add them as type double and then convert to int?
+        - double x1{};
+        - double x2{};
+        - double z = x1 + x2;
+        - int y{ static_cast<int>(z) };
+
+
     10. What is the variable type for each of the following declarations?
     a. auto cars = 15;
+        - int
     b. auto iou = 150.37f;
+        - float
     c. auto level = 'B';
+        - char
     d. auto crat = U'/U00002155';
+        - unsigned char32_t
     e. auto fract = 8.25f/2.5
+        - double
     */
 
+    //------------------------------------------------------------------------
+    // Programming Exercises: (see 'Programing Exercises' secion in Chapter 3)
+    //------------------------------------------------------------------------
 
 
     //-----------------------------------------------------------
