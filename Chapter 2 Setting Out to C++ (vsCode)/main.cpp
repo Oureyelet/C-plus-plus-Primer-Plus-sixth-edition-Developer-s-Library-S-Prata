@@ -200,7 +200,7 @@ int main()
             - Or using namespace std;
     */
 
-    //Programming Exercises:
+    //Programming Exercises: (see 'Programing Exercises' secion in Chapter 2)
     
 
 
