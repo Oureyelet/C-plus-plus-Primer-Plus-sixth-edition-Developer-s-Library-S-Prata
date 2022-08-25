@@ -10,16 +10,14 @@
 
 int main()
 {
-    // 1 ft = 12 inches
-
-    const int one_ft_is_inches{ 12 };
+    const int one_ft_is_inches{ 12 };  // 1 ft = 12 inches
     int inches{};
 
-    int feet{ inches / one_ft_is_inches };
-    int inches_remainder{ inches % one_ft_is_inches }; // remainder in inches
-    
     std::cout << "Enter you height in inches please_: ";
     std::cin >> inches; // 5 
+    
+    int feet{ inches / one_ft_is_inches };
+    int inches_remainder{ inches % one_ft_is_inches }; // remainder in inches
 
     std::cout << inches << " inches is " << feet << " feet, and " << inches_remainder << " in.\n";
 
