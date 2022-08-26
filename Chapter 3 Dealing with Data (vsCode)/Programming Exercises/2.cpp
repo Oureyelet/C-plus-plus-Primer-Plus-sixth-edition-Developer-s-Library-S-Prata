@@ -16,7 +16,6 @@
             meters. Use symbolic constants to represent the various conversion factors.
 */
 #include <iostream>
-#include <cmath> // for sqrt() function.
 
 int main()
 {
