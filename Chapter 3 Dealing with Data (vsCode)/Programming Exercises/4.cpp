@@ -14,15 +14,25 @@
 int main()
 {
     long seconds{};
-    const long days{ seconds % 86400 };
+    const long days{ 86400 };
     const long hours{ 3600 };
     const long minutes{ 60 };
 
     std::cout << "Enter the number of seconds: ";
-    std::cin >> seconds;
-    std::cout << days;
+    std::cin >> seconds;                            // 31600000 sec
+    
+    long whole_days{ seconds / days };              // 31600000 / 86400 = 365 days
+    long reminder_days{ seconds % days };           // 31600000 % 86400 = 64000 sec.
 
-    //std::cout << seconds << " seconds = " << 
+    long whole_hours{ reminder_days / hours };      // 64000 / 3600 = 17 hrs 
+    long reminder_hours{ reminder_days % hours };   // 64000 % 3600 = 2800 sec.
+
+    long whole_minutes{ reminder_hours / minutes }; // 2800 / 60 = 46 min
+    long reminder_minutes{ seconds % minutes };     // 2800 % 60 = 40 sec.
+
+    std::cout << seconds << " seconds = " << whole_days << " days, "
+              << whole_hours << " hours, " << whole_minutes << " minutes, "
+              << reminder_minutes << " seconds.\n";
 
     std::cin.get();
     std::cin.get();
