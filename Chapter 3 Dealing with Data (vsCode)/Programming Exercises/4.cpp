@@ -13,7 +13,16 @@
 
 int main()
 {
-    
+    long seconds{};
+    const long days{ seconds % 86400 };
+    const long hours{ 3600 };
+    const long minutes{ 60 };
+
+    std::cout << "Enter the number of seconds: ";
+    std::cin >> seconds;
+    std::cout << days;
+
+    //std::cout << seconds << " seconds = " << 
 
     std::cin.get();
     std::cin.get();
