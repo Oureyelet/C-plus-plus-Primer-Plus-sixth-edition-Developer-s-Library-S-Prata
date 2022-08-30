@@ -16,8 +16,13 @@ int main()
 
     std::cout << "Total yams = ";
     std::cout << yams[0] + yams[1] + yams[2] << '\n';
-    
+    std::cout << "The package with " << yams[1] << " yams costs ";
+    std::cout << yam_costs[1] << " cents per yam.\n";
+    int total = total + yams[2] * yam_costs[2];
+    std::cout << "The total yam expense is " << total << " cents.\n";
 
+    std::cout << "\nSize of yam array = " << sizeof yams << " bytes.\n";
+    std::cout << "Size of one element = " << sizeof yams[0] << " bytes.\n";
 
     return 0;
 }
