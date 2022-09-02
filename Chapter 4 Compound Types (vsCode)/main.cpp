@@ -58,6 +58,22 @@ int main()
     //-------------------------------
     // Concatenating String Literals: 
     //-------------------------------
+    std::cout << "Hello World my name is Sophie" " Kacperska.\n";   // all the following output statements are equivalent to each other
+    std::cout << "Hello World my name is Sophie Kacperska.\n";      // all the following output statements are equivalent to each other
+    std::cout << "Hello World my name is Sophie"                    // all the following output statements are equivalent to each other
+    " Kacperska.\n";                                                // all the following output statements are equivalent to each other
+
+
+    //---------------------------------------------------------------------
+    // Using String in an Array: please see "Listing 4. strings.cpp" file
+    //---------------------------------------------------------------------
+
+        // Program notes:
+
+
+    //---------------------------------------------------------------------
+    // Adventures in String Input:
+    //---------------------------------------------------------------------
 
     return 0;
 }
