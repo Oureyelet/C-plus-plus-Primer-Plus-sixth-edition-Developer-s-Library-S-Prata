@@ -21,6 +21,7 @@ int main()
     name2[3] = '\0';    // set to null character
     std::cout << "Here are the first 3 characters on my name: ";
     std::cout << name2 << '.' << std::endl;
+    .
 
 
     return 0;
