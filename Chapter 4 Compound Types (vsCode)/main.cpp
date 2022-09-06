@@ -65,18 +65,44 @@ int main()
 
 
     //---------------------------------------------------------------------
-    // Using String in an Array: please see "Listing 4. strings.cpp" file
+    // Using String in an Array: please see "Listing 4.2 strings.cpp" file
     //---------------------------------------------------------------------
 
         // Program notes:
 
 
     //---------------------------------------------------------------------
-    // Adventures in String Input:
+    // Adventures in String Input: please see "Listing 4.3 instr1.cpp" file
     //---------------------------------------------------------------------
     std::cout << "Time for moving out to Sheffield 22:44 :D " << '\n';
     std::cout << "Airbnb time... " << '\n';
     std::cout << "I will try today... " << '\n';
+
+
+    //---------------------------------------
+    // Reading String Input a Line at a Time: 
+    //---------------------------------------
+
+
+    //-----------------------------------------------------------------------------
+    // Line-Oriented Input with getline(): please see "Listing 4.4 instr2.cpp" file
+    //-----------------------------------------------------------------------------
+    char name[20];
+    std::cout << "Enter your full name place: ";
+    std::cin.getline(name, 19);
+    std::cout << "Hello " << name << '\n';
+
+
+    //-------------------------------------------------------------------------
+    // Line-Oriented Input with get(): please see "Listing 45 instr3.cpp" file
+    //-------------------------------------------------------------------------
+    
+
+    //-------------------------------------------------------------------------
+    // Empty Lines and Other Problems:
+    //-------------------------------------------------------------------------
+    
+    
 
     return 0;
 }
