@@ -1,6 +1,7 @@
 // main.cpp -- S.Prata C++ Primer Plus 6th ed. Chapter 4 -- Compound Types.
 
 #include <iostream>
+#include <string> // for string object
 
 int main()
 {
@@ -109,9 +110,30 @@ int main()
     
 
     //---------------------------------------------------------------------------
-    // Introduing the string Class: please see "Listing 4.7 strtype1.cpp" file
+    // Introducing the string Class: please see "Listing 4.7 strtype1.cpp" file
     //---------------------------------------------------------------------------
-    
+    std::string oko;
+    char charr3[200] = "Hello World my name is Sophie";
+    oko = charr3;   // You can initialize a string object to a C-style string.
+    std::cout << charr3 << '\n';
+
+    //You can use array notation to access individual characters stored in a string object:
+    std::cout << "Third letter in oko is " << oko[2] << '\n';
+
+
+    //-----------------------------
+    // C++11 String Initialization:
+    //-----------------------------
+    char first_date[] = { "Queen Elizabeth II" };       // List-initialization is availables 
+    char second_date[]{ "Queen Elizabeth II" };         // for C-style strings
+    std::string third_date = { "Queen Elizabeth II" };  // and
+    std::string fourth_date{ "Queen Elizabeth II" };    // string objects.
+
+
+    //-------------------------------------------
+    // Assignment, Concatenation, and Appending:
+    //-------------------------------------------
+
 
 
     return 0;
