@@ -1,7 +1,8 @@
 // main.cpp -- S.Prata C++ Primer Plus 6th ed. Chapter 4 -- Compound Types.
 
 #include <iostream>
-#include <string> // for string object
+#include <string>   // for string object
+#include <cstring>  // for C-style library   
 
 int main()
 {
@@ -130,10 +131,49 @@ int main()
     std::string fourth_date{ "Queen Elizabeth II" };    // string objects.
 
 
-    //-------------------------------------------
-    // Assignment, Concatenation, and Appending:
-    //-------------------------------------------
+    //--------------------------------------------------------------------------------------
+    // Assignment, Concatenation, and Appending: please see "Listing 4.8 strtype2.cpp" file
+    //--------------------------------------------------------------------------------------
+    char charr_1[20];               // create an empty array
+    char charr_2[20] = "jaguar";    // create an initialized array
+    std::string str_1;              // create an empty string object
+    std::string str_2 = "panther";  // create an initialized string
+    // charr_1 = charr_2;              // INVALID, no array assignment
+    str_1 = str_2;                  // VALID, object assignment ok
 
+    std::string str_3;
+    str_3 = charr_2 + str_2;
+    str_1 += str_2;
+
+    std::cout << "str_3: " << str_3 << " and str_1: " << str_1 << '\n';
+
+
+    //--------------------------------------------------------------------------
+    // More string Class Operations: please see "Listing 4.8 strtype2.cpp" file
+    //--------------------------------------------------------------------------
+    std::string a1{ "Hello" };
+    std::string a2{ " World" };
+    std::string a3;
+
+    a3 = a1 + a2;
+
+    std::cout << "a3: " << a3 << '\n';
+
+    // is equivalent of:
+
+    char b1[]{ "Hello" };
+    char b2[]{ " World" };
+
+    int len1 = strlen(b1);
+
+    char b3[2 * len1];
+
+    strcpy(b3, b1);
+    strcat(b3, b2);
+
+    std::cout << "b3: " << b3 << '\n';
+
+    
 
 
     return 0;
