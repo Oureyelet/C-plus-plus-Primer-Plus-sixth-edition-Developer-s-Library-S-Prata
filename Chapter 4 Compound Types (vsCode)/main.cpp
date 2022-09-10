@@ -149,7 +149,7 @@ int main()
 
 
     //--------------------------------------------------------------------------
-    // More string Class Operations: please see "Listing 4.8 strtype2.cpp" file
+    // More string Class Operations: please see "Listing 4.9 strtype3.cpp" file
     //--------------------------------------------------------------------------
     std::string a1{ "Hello" };
     std::string a2{ " World" };
@@ -173,6 +173,30 @@ int main()
 
     std::cout << "b3: " << b3 << '\n';
 
+    //----------------------------------
+
+    std::string company{ "NiftyLift" };
+    int len2 = company.size();  // obtain length of company
+
+    char where[]{ "Hoyland" };
+    int len3 = strlen(where);
+    
+    std::cout << "Length of 'company' by using \" name.size(); \": " << len2 << '\n';
+    std::cout << "Length of 'where' by using \" strlen(name); \": " << len3 << '\n';
+
+    std::cout.put('h'); // put() function allow you to display single character
+    std::cout << std::endl;
+
+    //-----------------------------------------------------------------------
+    // More on string Class I/O: please see "Listing 4.10 strtype4.cpp" file 
+    //-----------------------------------------------------------------------
+    char charPizza[20];
+    strlen(charPizza);
+
+
+    //---------------------------------
+    // Other Forms of String Literals: 
+    //---------------------------------
     
 
 
