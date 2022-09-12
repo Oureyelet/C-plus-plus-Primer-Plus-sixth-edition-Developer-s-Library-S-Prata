@@ -197,7 +197,26 @@ int main()
     //---------------------------------
     // Other Forms of String Literals: 
     //---------------------------------
+    wchar_t titel[]{ L"Chief Astrogator" }; // w_char string
+    char16_t name2[]{ u"Felonia Ripova" };  // char_16 string
+    char32_t car[]{ U"Felonia Ripova" };    // char_32 string
+
+    std::cout << R"(Jim "King" Tutt uses "\n" instead of endl.)" << '\n';   // raw string
+
+
+    //--------------------------------------------------------------
+    // Introducing Structures: A structure is a user-definable type
+    //--------------------------------------------------------------
+
+    struct inflatable   // structure declaration
+    {
+        char name[20];
+        float valume;
+        double price;
+    };
     
+
+
 
 
     return 0;
