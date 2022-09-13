@@ -202,6 +202,7 @@ int main()
     char32_t car[]{ U"Felonia Ripova" };    // char_32 string
 
     std::cout << R"(Jim "King" Tutt uses "\n" instead of endl.)" << '\n';   // raw string
+    std::cout << R"+*("(Who wouldn't?)", she whispered.)+*" << std::endl;
 
 
     //--------------------------------------------------------------
@@ -214,7 +215,15 @@ int main()
         float valume;
         double price;
     };
-    
+
+    inflatable hat;             // hat is a structure variable of type inflatable
+    inflatable woopy_cushoon;   // type inflatable variable
+    inflatable mainframe;       // type inflatable variable
+
+    mainframe.name = "y00000000000000000o";
+
+    std::cout << mainframe.name << '\n';
+
 
 
 
