@@ -188,7 +188,7 @@ int main()
     std::cout << std::endl;
 
     //-----------------------------------------------------------------------
-    // More on string Class I/O: please see "Listing 4.10 strtype4.cpp" file 
+    // More on string Class I/O:  please see "Listing 4.10 strtype4.cpp" file
     //-----------------------------------------------------------------------
     char charPizza[20];
     strlen(charPizza);
@@ -220,10 +220,16 @@ int main()
     inflatable woopy_cushoon;   // type inflatable variable
     inflatable mainframe;       // type inflatable variable
 
-    mainframe.name = "y00000000000000000o";
 
-    std::cout << mainframe.name << '\n';
+    //-----------------------------------------------------------------------------
+    // Using a Structure in a Program: please see "Listing 4.11 structur.cpp" file
+    //-----------------------------------------------------------------------------
+        // Program Notes
+    
 
+    //---------------------------------
+    // C++11 Structure Initialization: 
+    //---------------------------------
 
 
 
