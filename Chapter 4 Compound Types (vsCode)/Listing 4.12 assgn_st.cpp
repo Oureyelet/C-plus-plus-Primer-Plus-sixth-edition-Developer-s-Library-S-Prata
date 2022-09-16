@@ -8,6 +8,8 @@ struct inflatable
     double price;
 };
 
+
+
 int main()
 {
     inflatable bouquet = 

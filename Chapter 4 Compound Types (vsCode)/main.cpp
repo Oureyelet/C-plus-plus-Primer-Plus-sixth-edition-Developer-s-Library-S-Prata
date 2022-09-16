@@ -237,13 +237,123 @@ int main()
     //--------------------------------------------
 
 
-    //--------------------------------------------
-    // Other Structure Properties:
-    //--------------------------------------------
+    //-------------------------------------------------------------------------
+    // Other Structure Properties: please see "Listing 4.12 assgn_st.cpp" file
+    //-------------------------------------------------------------------------
 
+    struct rodzina
+    {
+        /*
+        You can combine the definition of a structure form with the creation of structure
+        variables.To do so, you follow the closing brace with the variable name or names:
+        */
 
+        char imie[20];
+        char plec[20];
+        int wiek;
+    }Lenczuk, Kacperscy;    // two perks variables
 
+    Lenczuk = 
+    {
+        "Anna",
+        "Kobieta",
+        32
+    };
 
+    std::cout << "Name of first family member: " << Lenczuk.imie << " and sex " << Lenczuk.plec << " and age " 
+              << Lenczuk.wiek << '\n';
+
+    Kacperscy =
+    {
+        "Mateusz",
+        "Mezczyzna",
+        30
+    };
+
+    //---------------------
+
+    struct company
+    {
+        /*
+        You even can initialize a variable you create in this fashion:
+        */
+
+        char name[20];
+        int employee_number;
+    }niftylift = 
+    {
+        "Niftylift",    // value for niftylift.name member
+        1430            // value for niftylift.employee_number member
+    };
+
+    std::cout << "You are employee in " << niftylift.name << " and your employee number is " 
+              << niftylift.employee_number << '\n';
+
+    //---------------------
+
+    struct      // no tag (name)
+    {
+                /*
+                Another thing you can do with structures is create a structure with no type name.
+                */
+
+        int x;  // 2 members
+        int y;
+    }position;  // a structure variable
+
+    //---------------------
+    
+    struct instrument
+    {
+        /*
+        C++ structures
+        can have member functions in addition to member variables. 
+        */
+
+        void guitar()
+        {
+            std::cout << "Guitar here!" << '\n';
+        }
+    };
+
+    instrument guitar;
+    guitar.guitar();
+
+    
+    //-------------------------------------------------------------------------
+    // Arrays of Structures: please see "Listing 4.13 arrstruc.cpp" file
+    //-------------------------------------------------------------------------
+    struct table
+    {
+        char name[20];
+        char color[20];
+        double price;
+    };
+
+    table round[100];   // array of 100 table structures
+
+    std::cout << "Enter name of [1] round table: ";
+    std::cin >> round[0].name;                          // use name member of first struct
+    std::cout << "Enter color of [1] round table: ";
+    std::cin >> round[0].color;
+    std::cout << "Enter price of [1] round table: ";
+    std::cin >> round[0].price;
+    std::cout << round[0].name << " is " << round[0].color << " color and is cost $" << round[0].price << ".\n";
+
+    std::cout << "Enter name of [2] round table: ";
+    std::cin >> round[1].name;                          // use name member of second struct
+    std::cout << "Enter color of [2] round table: ";
+    std::cin >> round[1].color;
+    std::cout << "Enter price of [2] round table: ";
+    std::cin >> round[1].price;
+    std::cout << round[1].name << " is " << round[1].color << " color and is cost $" << round[1].price << ".\n";
+    
+
+/*
+Keep in mind that gifts itself is an array, not a structure, so constructions such as
+gifts.price are not valid.
+To initialize an array o....
+*/
 
     return 0;
 }
