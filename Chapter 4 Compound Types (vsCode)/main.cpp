@@ -348,12 +348,26 @@ int main()
     std::cin >> round[1].price;
     std::cout << round[1].name << " is " << round[1].color << " color and is cost $" << round[1].price << ".\n";
     
+    //-------------------
 
-/*
-Keep in mind that gifts itself is an array, not a structure, so constructions such as
-gifts.price are not valid.
-To initialize an array o....
-*/
+    table square[3] =                   // initializing an array of structs
+    {
+        {"Sophie", "rozowy", 12},       // first structure in array
+        {"Ania", "bialy", 77},          // second structure in array
+        {"Mateusz", "niebieski", 33}    // third structure in array
+    };
+
+    std::cout << square[1].name << " is " << square[1].color << " color and is cost $" << square[1].price << ".\n";
+
+
+
+    //--------------------------
+    // Bit Field in Structures:
+    //--------------------------
+
+
+
+
 
     return 0;
 }
