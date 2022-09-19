@@ -364,8 +364,200 @@ int main()
     //--------------------------
     // Bit Field in Structures:
     //--------------------------
+    
+    struct torgle_register
+    {
+        unsigned int SN : 4;    // 4 bits for SN value
+        unsigned int : 4;       // 4 bits unused
+        bool goodIn : 1;        // valid input (1 bit)
+        bool goodTorgle : 1;    // successful torgling
+    };
+
+    torgle_register tr =
+    {
+        14,
+        true,
+        false
+    };
 
 
+
+    //---------
+    // Unions:
+    //---------
+    
+    union one4all
+    {
+        int int_val;
+        long long_val;
+        double double_val;
+    };
+
+    one4all pail;
+    pail.int_val = 15;                                              // store an int
+    std::cout << "Pail int value = " << pail.int_val << '\n';
+    pail.double_val = 1.38;                                         // store a double, int value is lost
+    std::cout << "Pail double value = " << pail.double_val << '\n';
+
+    //-------------------
+    // another example...
+
+    /*
+     For example, suppose you manage a mixed inventory of widg-
+    ets, some of which have an integer ID, and some of which have a string ID. In that case,
+    you could use the following:
+    */
+
+    struct widget
+    {
+        char brand[20];
+        int type;
+
+        union id                // format depends on widget type
+        {
+            long id_num;        // type 1 wodgets
+            char id_char[20];   // other widgets
+        }id_val;
+    };
+
+    widget prize;
+    
+    if(prize.type == 1)
+    {
+        std::cout << "Please enter prize for \" prize.id_val.id_num \":";
+        std::cin >> prize.id_val.id_num;
+    }
+    else
+    {
+        std::cout << "Please enter name of \"prize.id_val.id_char\":";
+        std::cin >> prize.id_val.id_char;
+    }
+
+    //----------------
+    // next example...
+
+    /*
+    An anonymous union has no name; in essence, its members become variables that share
+    the same address. Naturally, only one member can be current at a time:
+    */
+    
+    struct shoes
+    {
+        char brand[20];
+        double prize;
+
+        union
+        {
+            int id_pound;
+            double id_pence;
+        };
+    };
+    
+    shoes nike;
+
+    /*
+    Because the union is anonymous, id_pound and id_pence are treated as two members of
+    shoes that share the same address
+    */
+
+    if(nike.brand == "nike")
+    {   
+        std::cout << "Enter prize for nike in pound: ";
+        std::cin >> nike.id_pound;
+    }
+    else
+    {
+        std::cin >> nike.brand;
+    }
+    std::cout << std::endl;
+
+
+    //--------------
+    // Enumerations:
+    //--------------
+    // Enum facility provides an alternative to const for creating symbolic constants.
+    
+    // You can do something like this:
+    const int spctrum_red = 0;
+    const int spctrum_orange = 1;
+    const int spctrum_yellow = 2;
+    const int spctrum_green = 3;
+    const int spctrum_blue = 4;
+    const int spctrum_vilete = 77;
+    const int spctrum_indigo = 78;
+    const int spctrum_ultraviolete = 79;
+
+    //or you can use enum intead:
+    enum spectrum
+    {
+        red,    // int value 0
+        orange, // int value 1
+        yellow, // int value 2
+        green,  // int value 3
+        blue,   // ... ans so on...
+        vilete = 77,    // explicitly assigning integer to difrent then default value
+        indigo, // int value 78
+        ultraviolet // int value 79
+    };
+
+    spectrum calor; // calor a variable of type spectrum
+
+    /*
+    You can assign an int value to an enum, provided that the value is valid and that you
+    use an explicit type cast:
+    */
+    calor = spectrum(2);    // typecast 3 to type spectrum
+    std::cout << "Calor here: " << calor << '\n';     // print 2
+    calor = vilete;
+    std::cout << "Calor here: " << calor << '\n';     // print 77
+    
+    spectrum calor_2;
+    calor_2 = ultraviolet;
+    std::cout << "Here calor_2: " << calor_2 << '\n'; // print 79
+
+    /*
+    If you plan to use just the constants and not create
+    variables of the enumeration type, you can omit an enumeration type name, as in this
+    example:
+    */
+    enum{one = 1, two = 2, three = 3 , twentytwo = 22};
+    std::cout << "Our const one = " << one << '\n';
+    std::cout << "Our const two = " << two << '\n';
+    std::cout << "Our const three = " << three << '\n';
+    std::cout << "Our const twentytwo = " << twentytwo << '\n';
+
+
+
+    //---------------------------
+    // Setting Enumerator Values:
+    //---------------------------
+
+    /*
+    You can set enumerator values explicitly by using the assignment operator:
+    */
+    enum days
+    {
+        mon = 1,
+        tue = 2,
+        wen = 3,
+        thu = 4,
+        fri = 5,
+        sat = 6,
+        sun =7
+    };
+
+
+
+    //--------------------------------
+    // Value Ranges for Enumerations:
+    //--------------------------------
+    
+
+
+    //-------------------------------------------------------------------------
+    // Pointers and the Free Store: please see "Listing 4.14 address.cpp" file
+    //-------------------------------------------------------------------------
+    
 
 
 
