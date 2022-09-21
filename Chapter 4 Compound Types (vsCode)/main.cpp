@@ -558,10 +558,22 @@ int main()
     // Pointers and the Free Store: please see "Listing 4.14 address.cpp" file
     //-------------------------------------------------------------------------
 
-    // 'Run time' means while a program is runing. (You can choice for example how many index array should have) 
-    // 'Compile time' means when the compiler is putting a program together (for example you olready said how many memory array has)
+    /*
+    1.  'Run time' means while a program is runing. 
+        (You can choice for example how many index array should have) 
+
+    2.  'Compile time' means when the compiler is putting a program together 
+        (for example you olready said how many memory array has)
+    */ 
     
 
+
+    //-------------------------------------------------------------------------
+    // Declaring and Initializing Pointers:
+    //-------------------------------------------------------------------------
+
+    double *tax_ptr;    // tax_ptr points to type double 
+    char *str;          // str points to type char
 
 
     return 0;

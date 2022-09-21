@@ -18,7 +18,7 @@ int main()
 
     // use pointer to change value
         *ptr_updates = *ptr_updates + 1;
-        std::cout << "Now updates = "
+        std::cout << "Now updates = " << updates << '\n';
 
     return 0;
 }
