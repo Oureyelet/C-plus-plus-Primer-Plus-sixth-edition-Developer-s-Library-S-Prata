@@ -7,7 +7,7 @@
 int main()
 {
     //---------------------
-    // Introduction Arrays: 
+    // Introducing Arrays: 
     //---------------------
     short months[12];   // Creates array of 12 short
         
@@ -594,14 +594,30 @@ int main()
     //---------------------------------------------------------------------------------
 
     int *pn{ new int };
+    
+        /*  Stack and Heap:  
+
+            int x2{ 123 };
+            int ptr_int{ new int };
+            *ptr_int = 123;
+
+            stack memmory: normal variables like our 'x2' and 'ptr_int' are stored in memory region called 'stack'
+            ...wherease the memory allocated by 'new' is in a region called the 'heap' or 'free store'
+        */
+
+    // Program Notes:
+
+        // Out of memory ?
+
+    double *ptr_double{ new double };
+    *ptr_double = 0;    // null pointer
 
 
 
     //---------------------------------------------------------------------------------
-    // Program Notes: 
+    // Freeing Memory with 'delete':
     //---------------------------------------------------------------------------------
     
-
     
 
     return 0;

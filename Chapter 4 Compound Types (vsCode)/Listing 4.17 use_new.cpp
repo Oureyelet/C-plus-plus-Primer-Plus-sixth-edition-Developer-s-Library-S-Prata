@@ -4,11 +4,12 @@
 int main()
 {
     int nights{ 1001 };
-    int *ptr_int{ new int };    // allocate pace for an int
+    int *ptr_int{ new int };    // allocate space for an int
     *ptr_int = 1001;            // store a value there
 
     std::cout << "nights value = " << nights << ": location " << &nights << '\n';
     std::cout << "int value = " << *ptr_int << ": location " << ptr_int << '\n';
+    std::cout << "location of pointer ptr_int = " << &ptr_int << '\n';
 
     //-------------------------------------------------------------------------------
 
