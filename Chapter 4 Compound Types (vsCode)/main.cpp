@@ -563,7 +563,7 @@ int main()
         (You can choice for example how many index array should have) 
 
     2.  'Compile time' means when the compiler is putting a program together 
-        (for example you olready said how many memory array has)
+        (for example you already said how many memory array has)
     */ 
     
 
@@ -618,7 +618,58 @@ int main()
     // Freeing Memory with 'delete':
     //---------------------------------------------------------------------------------
     
+    int *ps{ new int }; // allocate memory with 'new'
+    //...               // use the memory
+    delete ps;          // free memory with 'delete' when done
+
+    //---------------------------------------------------------------------------------
+
+    int size = 3;
+    int *ptr{ new int };
+
+    std::cout << "Ptr before inittialized: " << *ptr << '\n';
+
+    *ptr = size;
+
+    std::cout << "Ptr after inittialized: " << *ptr << '\n';
+
+    delete ptr;
+
+    std::cout << "Ptr after delete 'new int': " << *ptr << '\n';
+
+    //---------------------------------------------------------------------------------
     
+    int *null_POINTER{ null_ptr };
+    delete null_POINTER;
+
+    
+    
+    //---------------------------------------------------------------------------------
+    // Using 'new' to Create Dynamic Arrays:
+    //---------------------------------------------------------------------------------
+
+        /*
+            Allocating the array during compile time is called 'static binding' - meaning the array was 
+            allocated ar compile time.
+        
+            'dyanimis binding' is where program is already runing and then we decide if we need new array and
+            how big this array has to be
+        */
+
+
+
+    
+    //---------------------------------------------------------------------------------
+    // Creating a Dynamic Array with 'new':
+    //---------------------------------------------------------------------------------
+    
+    int *psome = new int [10];  // array of 10 ints - get a block od 10 ints
+    delete[] psome;             // free a dynamic array
+    
+
+
+
+
 
     return 0;
 }
