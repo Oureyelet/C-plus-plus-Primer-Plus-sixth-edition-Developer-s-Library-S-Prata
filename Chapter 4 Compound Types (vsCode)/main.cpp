@@ -639,8 +639,8 @@ int main()
 
     //---------------------------------------------------------------------------------
     
-    int *null_POINTER{ null_ptr };
-    delete null_POINTER;
+    int *null_POINTER{ 0 };
+    delete null_POINTER;    // It’s safe to apply delete to the null pointer (nothing happens).
 
     
     
@@ -665,6 +665,32 @@ int main()
     
     int *psome = new int [10];  // array of 10 ints - get a block od 10 ints
     delete[] psome;             // free a dynamic array
+
+        /*
+            "You can’t use the sizeof operator, for example, to find
+            the number of bytes in a dynamically allocated array."
+        */
+    
+    //----------------------------------------------------------------------------------
+
+        /*
+            "As you’re about to see, you can use
+            pointer_name in many of the same ways you
+            can use an array name" For example:
+        */
+
+        double *d_ptr = new double [120];
+        d_ptr[0] = 3.32;
+        d_ptr[1] = 7.45;
+
+        double d_array[5]{ 3.23, 5.23, 6.56 };
+
+        std::cout << d_ptr[0] << '\n';
+        std::cout << d_array[1] << '\n';
+
+    //----------------------------------------------------------------------------------
+
+    
     
 
 
