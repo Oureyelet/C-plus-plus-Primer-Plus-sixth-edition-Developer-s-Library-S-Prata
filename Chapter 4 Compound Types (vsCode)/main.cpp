@@ -639,8 +639,8 @@ int main()
 
     //---------------------------------------------------------------------------------
     
-    int *null_POINTER{ 0 };
-    delete null_POINTER;    // It’s safe to apply delete to the null pointer (nothing happens).
+    int *null_POINTER{ 0 }; // example of null pointer
+    delete null_POINTER;    // it’s safe to apply delete to the null pointer (nothing happens).
 
     
     
@@ -679,18 +679,18 @@ int main()
             can use an array name" For example:
         */
 
-        double *d_ptr = new double [120];
-        d_ptr[0] = 3.32;
-        d_ptr[1] = 7.45;
+        double *d_ptr = new double [120];       // example of use 'new' 
+        d_ptr[0] = 3.32;                        // initialize first element of our 'd_ptr' array
+        d_ptr[1] = 7.45;                        // initialize second element of our 'd_ptr' array
 
-        double d_array[5]{ 3.23, 5.23, 6.56 };
+        double d_array[5]{ 3.23, 5.23, 6.56 };  // created array with normal static way + initializ them 
 
-        std::cout << d_ptr[0] << '\n';
-        std::cout << d_array[1] << '\n';
+        std::cout << d_ptr[0] << '\n';          // display first element of 'd_ptr' array
+        std::cout << d_array[1] << '\n';        // display second element of 'd_array' array
 
     //----------------------------------------------------------------------------------
 
-    
+
     
 
 
