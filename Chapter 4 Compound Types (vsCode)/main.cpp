@@ -694,8 +694,17 @@ int main()
 
 
     //---------------------------------------------------------------------------------
-    // Using a Dynamic Array:
+    // Using a Dynamic Array: please see "Listing 4.18 arraynew.cpp"
     //---------------------------------------------------------------------------------
+    
+    int *some_ptr = new int [25];   // example of pointer array using 'new' int
+    some_ptr[0] = 12;
+
+    std::cout << "Here is value of first element of our pointer array some_ptr: " << *some_ptr << '\n';
+    std::cout << "Here is address of first element of our pointer array some_ptr: " << some_ptr << '\n';
+    std::cout << "Here is again value of our first element of pointer array some_ptr: " << *some_ptr << '\n';
+
+    
     
 
 
