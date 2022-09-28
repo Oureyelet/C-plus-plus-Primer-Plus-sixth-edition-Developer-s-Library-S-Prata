@@ -704,10 +704,22 @@ int main()
     std::cout << "Here is address of first element of our pointer array some_ptr: " << some_ptr << '\n';
     std::cout << "Here is again value of our first element of pointer array some_ptr: " << *some_ptr << '\n';
 
+    //----------------------------------------------------------------------------------
+    
+        /*
+            "The fundamental difference between an array
+            name and a pointer appears in the following line:"
+        
+            p3 = p3 + 1; // okay for pointers, wrong for array names
+        */
     
     
-
-
+    
+    
+    //---------------------------------------------------------------------------------
+    // Pointers, Arrays, and Pointer Arithmetic:
+    //---------------------------------------------------------------------------------
+    
 
 
 
