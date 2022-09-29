@@ -699,10 +699,30 @@ int main()
     
     int *some_ptr = new int [25];   // example of pointer array using 'new' int
     some_ptr[0] = 12;
+    some_ptr[1] = 13;
+    some_ptr[2] = 14;
 
-    std::cout << "Here is value of first element of our pointer array some_ptr: " << *some_ptr << '\n';
-    std::cout << "Here is address of first element of our pointer array some_ptr: " << some_ptr << '\n';
-    std::cout << "Here is again value of our first element of pointer array some_ptr: " << *some_ptr << '\n';
+    std::cout << "[Before increment the pointer] Here is value of first element of our pointer array some_ptr: " << *some_ptr << '\n';
+    std::cout << "[Before increment the pointer] Here is address of first element of our pointer array some_ptr: " << some_ptr << '\n';
+    std::cout << "[Before increment the pointer] Here is again value of our first element of pointer array some_ptr: " << *some_ptr << '\n';
+
+        /*
+            "The near equivalence of pointers and array names stems from pointer arithmetic and how
+            C++ handles arrays internally. First, let’s check out the arithmetic.Adding one to an inte-
+            ger variable increases its value by one, but adding one to a pointer variable increases its
+            value by the number of bytes of the type to which it points.Adding one to a pointer to
+            double adds 8 to the numeric value on systems with 8-byte double, whereas adding one
+            to a pointer-to-short adds two to the pointer value if short is 2 bytes. Listing 4.19
+            demonstrates this amazing point. It also shows a second important point: C++ interprets
+            the array name as an address."
+        */
+
+    some_ptr = some_ptr + 1;
+
+    std::cout << "[After increment the pointer] Here is value of first element of our pointer array some_ptr: " << *some_ptr << '\n';
+    std::cout << "[After increment the pointer] Here is address of first element of our pointer array some_ptr: " << some_ptr << '\n';
+    std::cout << "[After increment the pointer] Here is again value of our first element of pointer array some_ptr: " << *some_ptr << '\n';
+
 
     //----------------------------------------------------------------------------------
     
@@ -719,7 +739,7 @@ int main()
     //----------------------------------------------------------------------------------
     // Pointers, Arrays, and Pointer Arithmetic: please see "Listing 4.19 addpntrs.cpp"
     //----------------------------------------------------------------------------------
-    
+
     
 
 
