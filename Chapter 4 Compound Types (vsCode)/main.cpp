@@ -739,8 +739,22 @@ int main()
     //----------------------------------------------------------------------------------
     // Pointers, Arrays, and Pointer Arithmetic: please see "Listing 4.19 addpntrs.cpp"
     //----------------------------------------------------------------------------------
+        
+        //----------------------------------------------------------------------------------
+        // Program Notes:
+        //----------------------------------------------------------------------------------
+            
+            int array_1[5]{ 1, 2, 3, 4, 5 };            // example of int array with 5 elements
+            int *ptr_array_1 = array_1;                 // pointer of int array first element
 
-    
+            std::cout << array_1 << '\n';               // print same address: 0x7fffffffd9f0
+            std::cout << &array_1[0] << '\n';           // print same address: 0x7fffffffd9f0
+            std::cout << ptr_array_1 << '\n';           // print same address: 0x7fffffffd9f0
+
+            std::cout << *(ptr_array_1 + 1) << '\n';    // print: 2
+            ptr_array_1 += 1;                           // increment pointer by 1
+            std::cout << *ptr_array_1 << '\n';          // print same: 2
+            
 
 
 
