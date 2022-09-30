@@ -740,22 +740,39 @@ int main()
     // Pointers, Arrays, and Pointer Arithmetic: please see "Listing 4.19 addpntrs.cpp"
     //----------------------------------------------------------------------------------
         
-        //----------------------------------------------------------------------------------
+        //----------------
         // Program Notes:
-        //----------------------------------------------------------------------------------
+        //----------------
             
-            int array_1[5]{ 1, 2, 3, 4, 5 };            // example of int array with 5 elements
-            int *ptr_array_1 = array_1;                 // pointer of int array first element
+            int array_one[5]{ 1, 2, 3, 4, 5 };            // example of int array with 5 elements
+            int *ptr_array_one = array_one;                 // pointer of int array first element
 
-            std::cout << array_1 << '\n';               // print same address: 0x7fffffffd9f0
-            std::cout << &array_1[0] << '\n';           // print same address: 0x7fffffffd9f0
-            std::cout << ptr_array_1 << '\n';           // print same address: 0x7fffffffd9f0
+            // dereferencing oper-ator (*)
 
-            std::cout << *(ptr_array_1 + 1) << '\n';    // print: 2
-            ptr_array_1 += 1;                           // increment pointer by 1
-            std::cout << *ptr_array_1 << '\n';          // print same: 2
+            std::cout << array_one << '\n';               // print address of first element of array: 0x7fffffffd9f0
+            std::cout << ptr_array_one << '\n';           // print same address: 0x7fffffffd9f0
+            std::cout << &array_one[0] << '\n';           // print same address: 0x7fffffffd9f0
+            std::cout << &array_one << '\n';              // displays same  address of whole array: 0x7fffffffd9f0
             
+            std::cout << array_one + 1 << '\n';      // the expression array_one + 1 adds 4 to the address value (0x7fffffffafa4)
+            std::cout << &array_one + 1 << '\n';     // whereas &array_one + 1 adds 40 to the address value (0x7fffffffafb4)
 
+            std::cout << *(ptr_array_one + 1) << '\n';    // print: 2
+            std::cout << *(array_one + 1) << '\n';        // print: 2
+            std::cout << ptr_array_one[1] << '\n';        // print: 2
+            ptr_array_one += 1;                           // increment pointer by 1
+            std::cout << *ptr_array_one << '\n';          // print same: 2 because we move pointer to second address of our array.
+
+        //--------------------------
+        // The Address of an Array:
+        //--------------------------
+
+    
+
+    //----------------------------------------------------------------------------------
+    // Summarizing Pointer Points:
+    //----------------------------------------------------------------------------------
+     
 
 
     return 0;

@@ -8,6 +8,9 @@ int main()
     std::cout << array_1 << '\n';
     std::cout << &array_1[0] << '\n';
     std::cout << ptr << '\n';
+    std::cout << ptr[1] << '\n';
+    std::cout << *(ptr + 1) << '\n';
+    std::cout << *(array_1 + 1) << '\n';
 
 
     return 0;
