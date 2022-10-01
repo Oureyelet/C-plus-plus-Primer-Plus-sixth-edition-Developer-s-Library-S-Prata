@@ -772,7 +772,31 @@ int main()
     //----------------------------------------------------------------------------------
     // Summarizing Pointer Points:
     //----------------------------------------------------------------------------------
-     
+
+        // Declaring Pointers:
+            
+            double *ptr_xxx;    // example of declaring pointer - ptr_xxx can point to a double value
+            short *ptr_xxi;       // example of declaring pointer - ptr_xxi can point to a short value
+
+        // Assigning Values to Pointers:
+
+            /*
+                "You should assign a memory address to a pointer.You can apply the & operator to a vari-
+                able name to get an address of named memory, and the new operator returns the address of
+                unnamed memory."
+            */
+
+        double *pn_T;   // example of pointer to double
+        double *pa_T;   // example of pointer to double
+        char *pc_T;     // example of pointer to char
+
+        double bubble{ 3.2 };   // double variable
+
+        pn_T = &bubble;
+        pc_T = new char;
+        pa_T = new double[30];
+    
+
 
 
     return 0;

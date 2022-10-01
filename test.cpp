@@ -2,16 +2,9 @@
 
 int main()
 {
-    int array_1[5]{ 1, 2, 3, 4, 5 };
-    int *ptr = array_1;
+    int y{ 2 };
 
-    std::cout << array_1 << '\n';
-    std::cout << &array_1[0] << '\n';
-    std::cout << ptr << '\n';
-    std::cout << ptr[1] << '\n';
-    std::cout << *(ptr + 1) << '\n';
-    std::cout << *(array_1 + 1) << '\n';
-
+    float x{ y };
 
     return 0;
 }
