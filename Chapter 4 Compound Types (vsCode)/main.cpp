@@ -776,7 +776,7 @@ int main()
         // Declaring Pointers:
             
             double *ptr_xxx;    // example of declaring pointer - ptr_xxx can point to a double value
-            short *ptr_xxi;       // example of declaring pointer - ptr_xxi can point to a short value
+            short *ptr_xxi;     // example of declaring pointer - ptr_xxi can point to a short value
 
         // Assigning Values to Pointers:
 
@@ -786,18 +786,55 @@ int main()
                 unnamed memory."
             */
 
-        double *pn_T;   // example of pointer to double
-        double *pa_T;   // example of pointer to double
-        char *pc_T;     // example of pointer to char
+                double *pn_T;   // example of pointer to double
+                double *pa_T;   // example of pointer to double
+                char *pc_T;     // example of pointer to char
 
-        double bubble{ 3.2 };   // double variable
+                double bubble{ 3.2 };   // double variable
 
-        pn_T = &bubble;
-        pc_T = new char;
-        pa_T = new double[30];
-    
+                pn_T = &bubble;         // assign address of bubble to pn_T
+                pc_T = new char;        // assign address of newly allocated char memory to pc_T
+                pa_T = new double[30];  // assign address of 1st element of array of 30 double to pa_T
 
+        // Dereferencing Pointers:
 
+            std::cout << *pn_T << '\n'; // example of referring to the pointed-to value here we print 3.2 with our example
+            *pc_T = 'T';                // place 'T' into the memory location whose address is pc_T
+
+                /*
+                    "Array notation is a second way to dereference a pointer; for instance, pn[0] is the same
+                    as *pn.You should never dereference a pointer that has not been initialized to a proper
+                    address. For example:"
+                */
+                    pa_T[0] = 120;
+                    std::cout << *pa_T << " is same as " << pa_T[0] << '\n';
+
+        // Distinguishing Between a Pointer and the Pointed-to Value:
+
+            /*
+                "Remember, if pt is a pointer-to-int, *pt is not a pointer-to-int; instead, *pt is the com-
+                plete equivalent to a type int variable. It is pt that is the pointer."
+            */
+                int *pointer_to_int = new int;  // pointer to int (assigns an address to the pointer pt)
+                *pointer_to_int = 7;            // equivalent to a type int variable - not pointer to int. (stores the value 5 at that address)
+
+        // Array Names:
+
+            /*
+                "In most contexts, C++ treats the name of an array as equivalent to the address of the first
+                element of an array."
+            */
+                int taco[10];
+                std::cout << taco << " is same as: " << &taco[0] << '\n';
+            
+            /*
+               "One exception is when you use the name of an array with the sizeof operator. In that
+                case, sizeof returns the size of the entire array, in bytes."
+            */
+                std::cout << sizeof(taco) << " this is size of the entire array in bytes." << '\n';
+
+        // Pointer Arithmetic:
+            
 
     return 0;
 }
