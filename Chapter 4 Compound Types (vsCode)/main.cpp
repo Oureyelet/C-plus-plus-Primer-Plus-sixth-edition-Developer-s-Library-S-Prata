@@ -834,7 +834,20 @@ int main()
                 std::cout << sizeof(taco) << " this is size of the entire array in bytes." << '\n';
 
         // Pointer Arithmetic:
+        
+            int kiwi[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             
+            int *p_kiwi = kiwi;             // suppose p_kiwi and kiwi are the address 3000
+            int *w_kiwi = &kiwi[9];         // w_kiwi is 3036 if an int is 4 bytes
+
+            p_kiwi = p_kiwi + 1;            // now p_kiwi is 3004 if a int is 4 bytes
+            w_kiwi = w_kiwi - 1;            // now w_kiwi is 3032, the address of kiwi[8]
+
+            int diff = w_kiwi - p_kiwi;     // diff is 7, the separation between kiwi[8] and kiwi[1]
+
+            std::cout << "diff is : " << diff << '\n';  // print 7
+
+        // Dynamic Binding and Static Binding for Arrays:
 
     return 0;
 }
