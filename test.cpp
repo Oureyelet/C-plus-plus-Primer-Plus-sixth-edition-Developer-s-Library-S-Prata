@@ -2,9 +2,12 @@
 
 int main()
 {
-    int y{ 2 };
+    char flower[10]{ "rose" };
+    std::cout << flower << "s are red\n";
 
-    float x{ y };
+    char *ptr_to_flower = flower;
+
+    std::cout << ptr_to_flower << '\n';
 
     return 0;
 }

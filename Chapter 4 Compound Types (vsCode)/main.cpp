@@ -650,7 +650,7 @@ int main()
 
         /*
             Allocating the array during compile time is called 'static binding' - meaning the array was 
-            allocated ar compile time.
+            allocated at compile time.
         
             'dyanimis binding' is where program is already runing and then we decide if we need new array and
             how big this array has to be
@@ -848,6 +848,61 @@ int main()
             std::cout << "diff is : " << diff << '\n';  // print 7
 
         // Dynamic Binding and Static Binding for Arrays:
+
+            double kukunamuniu[3]{ 23.4, 56.3, 22.4 };  // static binding, size fixed at compile time
+
+            /*
+                "You use the new [] operator to create an array with dynamic binding (a dynamic
+                array)—that is, an array that is allocated and whose size can be set during runtime.You
+                free the memory with delete [] when you are done:"
+            */
+                int size_y;     // size of our dynamic dinding array
+                std::cout << "Enter size of Dynamick Binding Array: ";  // ask user to enter the size
+                std::cin >> size_y; // enter the size
+                int *array_new = new int[size_y];   // create dynamicly alocate memory array by using 'new' key word
+
+                for(int count{ 0 }; count < size_y; ++count)    // for loop for enter numbers to our dynamic array
+                {
+                    std::cout << "Enter " << count + 1 << " element of your array: ";   // ask user to enter the numbers
+                    std::cin >> array_new[count];   // enter first... second... third... and so on...
+                }
+
+                std::cout << "Here is your whole array sir: " << '\n';  // display 'Here is your whole array sir:'
+
+                for(int count{ 0 }; count < size_y; ++count)    // for loop for dispplay numbers from our array
+                {
+                    std::cout << array_new[count] << ' ';
+                }
+                std::cout << '\n';
+                delete [] array_new;    // free memory when finished.
+
+            // Array Notation and Pointer Notation:
+
+                /*
+                    "Using bracket array notation is equivalent to dereferencing a pointer:"
+                */
+                    short mini_array[3]{ 7, 8, 9 };
+
+                    std::cout << mini_array[0] << ' ' << mini_array[3] << " is equivalt to: " 
+                              << *mini_array   << ' ' << *(mini_array + 3) << '\n';
+
+                /*
+                    This is true for both array names and pointer variables, so you can use either pointer
+                    notation or array notation with pointers and array names.
+                */
+                    int *ptr_ex = new int[5];   // ptr_ex points to block of 5 ints
+                    *ptr_ex = 5;                // set element number 0 to 5
+                    ptr_ex[0] = 6;              // reset element number 0 to 6
+                    ptr[4] = 44;                // set fourth element (element number 5) to 44
+                    int coconat[10];    
+                    *(coconat + 4) = 13;        // set coconat[4] to 13
+
+    
+
+    //----------------------------------------------------------------------------------
+    // Pointers and Strings:
+    //----------------------------------------------------------------------------------
+    
 
     return 0;
 }
