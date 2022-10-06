@@ -902,7 +902,11 @@ int main()
     //----------------------------------------------------------------------------------
     // Pointers and Strings:
     //----------------------------------------------------------------------------------
-    
+        
+        /*
+            "A C-style string is simply an array of characters that uses 
+            a null terminator"
+        */
 
     return 0;
 }
