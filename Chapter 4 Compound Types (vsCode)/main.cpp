@@ -900,13 +900,30 @@ int main()
     
 
     //----------------------------------------------------------------------------------
-    // Pointers and Strings:
+    // Pointers and Strings: check example here -> "Listing 4.20 ptrstr.cpp"
     //----------------------------------------------------------------------------------
         
         /*
             "A C-style string is simply an array of characters that uses 
-            a null terminator"
+            a null terminator. Here is example of C-style string:"
         */
+            char example_of_C_style_str[30]{"I love you"};     // C-style example (is also string constant or string literal)
+            std::cout << example_of_C_style_str << " Jezus!\n"; /* 
+                                                                    "The cout object assumes that the address of a char is 
+                                                                    the address of a string, so it prints the character at
+                                                                    that address and then continues printing characters until 
+                                                                    it runs into the null character (\0)."
+                                                                */
+
+        /*
+            "With cout and with most C++ expressions, the name of an array of char, a pointer-to-
+            char, and a quoted string constant are all interpreted as the address of the first character
+            of a string."
+        */
+            char str_1[3]{ "Oko" };
+            char *ptr_str_1 = str_1;
+
+            
 
     return 0;
 }
