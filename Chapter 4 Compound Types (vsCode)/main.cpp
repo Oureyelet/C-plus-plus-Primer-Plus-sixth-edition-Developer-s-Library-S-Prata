@@ -920,9 +920,15 @@ int main()
             char, and a quoted string constant are all interpreted as the address of the first character
             of a string."
         */
-            char str_1[3]{ "Oko" };
-            char *ptr_str_1 = str_1;
+            char str_1[3]{ "Oko" };             // example of string literal
+            char *ptr_str_1 = "another eye";    // example of string literal
 
+        /*
+            "When you read a string into a program-style string, you should always use the address of
+            previously allocated memory. This address can be in the form of an array name or of a
+            pointer that has been initialized using new."
+        */
+        
             
 
     return 0;

@@ -2,12 +2,15 @@
 
 int main()
 {
-    char flower[10]{ "rose" };
-    std::cout << flower << "s are red\n";
+    char str[] = "Yo Ty";
 
-    char *ptr_to_flower = flower;
-
-    std::cout << ptr_to_flower << '\n';
+    std::cout << sizeof(str) << '\n';
+    
+    for(int count{ 0 }; count <= sizeof(str); ++count)
+    {
+        std::cout << str[6] << '\n';
+    }
+    std::cout << std::endl;
 
     return 0;
 }
