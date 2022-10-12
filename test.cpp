@@ -2,15 +2,19 @@
 
 int main()
 {
-    char str[] = "Yo Ty";
+    std::cout << "Ile razy wyswietlic ?:";
+    int x;
 
-    std::cout << sizeof(str) << '\n';
-    
-    for(int count{ 0 }; count <= sizeof(str); ++count)
+    std::cin >> x;
+
+    for(int bif{ 0 }; bif < x; ++bif)
     {
-        std::cout << str[6] << '\n';
+        std::cout << "Hello Robert i Kamila!" << "";
+
     }
-    std::cout << std::endl;
+    
+    
+
 
     return 0;
 }
