@@ -1,20 +1,13 @@
 #include <iostream>
+#include <cstring> // for strcpy() function
 
 int main()
 {
-    std::cout << "Ile razy wyswietlic ?:";
-    int x;
+    char waiting[7] = "Monday";
+    strncpy(waiting, "Next Week", 6);
+    waiting[6] = '\0';
 
-    std::cin >> x;
-
-    for(int bif{ 0 }; bif < x; ++bif)
-    {
-        std::cout << "Hello Robert i Kamila!" << "";
-
-    }
-    
-    
-
+    std::cout << waiting << '\n';
 
     return 0;
 }

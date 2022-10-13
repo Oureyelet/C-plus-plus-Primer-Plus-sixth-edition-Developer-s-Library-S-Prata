@@ -920,16 +920,63 @@ int main()
             char, and a quoted string constant are all interpreted as the address of the first character
             of a string."
         */
-            char str_1[3]{ "Oko" };             // example of string literal
-            char *ptr_str_1 = "another eye";    // example of string literal
+
+            /*
+                "Caution: Use strcpy() or strncpy(), not the assignment operator, to assign a string to an array."
+            */
+            char str_Bi[4]{ "Oko" };             // example of string literal
+            strncpy(str_Bi, "Yo", 3);
+            str_Bi[3] = '\0';
 
         /*
             "When you read a string into a program-style string, you should always use the address of
             previously allocated memory. This address can be in the form of an array name or of a
             pointer that has been initialized using new."
         */
+
+        /*
+            To avoid copy to big string into arrach we should use strncpy() function:
+            " It takes a third argument: the maximum number of characters to be copied. "
+        */
+        char waiting[7] = "Monday";
+        strncpy(waiting, "Next Week", 6);
+        waiting[6] = '\0';
+
+            /*
+                " Thus, you should use the function like this: This copies up to 6 characters into the array and 
+                then sets the last element to the null character. If the string is shorter than 6 characters, 
+                strncpy() adds a null character earlier to mark the true end of the string."
+            */
         
-            
+        // Caution: Use strcpy() or strncpy(), not the assignment operator, to assign a string to an array.
+
+    
+
+    //--------------------------------------------------------------------------------------------
+    // Using 'new' to Create Dynamic Structures: check example here -> "Listing 4.21 newstrct.cpp"
+    //--------------------------------------------------------------------------------------------
+
+        struct idea // structure definition
+        {
+            int good;
+            int bad;
+        };
+
+        idea gods_idea = { 3, 77 };             // "gods_idea" is a structure
+        idea *pgi = &gods_idea;                 // 'pgi' points to the 'gods_idea' structure
+
+        // Use '.' operator with structure names:
+            gods_idea.good = 777;
+            gods_idea.bad = 0;
+
+        // Use '->' oprator with pointer-to-structure:
+            pgi->good = 33;
+            pgi->bad = 0;
+
+        std::cout << "'(*pgi).good' represents the pointed-to value—the structure itself: " << (*pgi).good << '\n'; // print 33
+        std::cout << "'pgi->good' access to value: " << pgi->good << '\n';  // print 33
+
+
 
     return 0;
 }
