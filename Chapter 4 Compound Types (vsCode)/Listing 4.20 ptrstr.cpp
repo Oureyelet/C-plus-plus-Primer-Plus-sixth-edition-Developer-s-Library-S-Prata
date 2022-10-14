@@ -28,7 +28,7 @@ int main()
     std::cout << ps << " at " << (int *)ps << std::endl;
 
     ps = new char[strlen(animal) + 1];  // get new storage
-    strcpy(ps, animal);                 // copy string to new storage
+    strcpy(ps, animal);                 // by strcpy() we can copy string to new storage
 
         /*
             "The strcpy() function takes two arguments.The first is the destination address, and
