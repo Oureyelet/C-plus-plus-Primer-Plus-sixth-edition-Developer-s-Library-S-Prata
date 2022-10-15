@@ -24,7 +24,7 @@ char *getname()
     char temp[80];
     std::cout << "Enter your name: ";
     std::cin >> temp;
-    char *ptr = new char[strlen(temp) + 1];
+    char *ptr = new char[strlen(temp) + 1]; // + 1 because strlen() return lenght of 'temp' array minus null character '\0'
     strcpy(ptr, temp);  // copy string into smaller space
 
     return ptr;
