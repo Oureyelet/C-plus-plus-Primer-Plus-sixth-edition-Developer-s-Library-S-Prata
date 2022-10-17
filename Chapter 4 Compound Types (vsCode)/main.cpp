@@ -989,7 +989,52 @@ int main()
     //--------------------------------------------------------------------------------------------
     // Automatic Storage, Static Storage, and Dynamic Storage:
     //--------------------------------------------------------------------------------------------
-    
+
+        // Automomatic Storage:
+
+            /*
+                "Ordinary variables defined inside a function use automatic storage and are called automatic
+                variables.These terms mean that the variables come into existence automatically when the
+                function containing them is invoked, and they expire when the function terminates.
+                Automatic variables typically are stored on a stack.This means that when program exe-
+                cution enters a block of code, its variables are added consecutively to the stack in memory
+                and then are freed in reverse order when execution leaves the block. (This is called a last-
+                in, first-out, or LIFO, process."
+            */
+        
+        // Static Storage:
+
+            /*
+                "Static storage is storage that exists throughout the execution of an entire program.There
+                are two ways to make a variable static. One is to define it externally, outside a function.
+                The other is to use the keyword static when declaring a variable."
+            */
+
+        // Dynamic Storage:
+
+            /*
+                This is where you use 'New' and 'delete' to alocate memorry.
+                "The new and delete operators provide a more flexible approach than automatic and static
+                variables.They manage a pool of memory, which C++ refers to as the free store (or heap)."
+            */
+
+                // Stack, Heaps, and Memory Leaks:
+
+                    /*
+                        "Even the best programmers and software companies create memory leaks. To avoid them,
+                        it’s best to get into the habit of joining your new and delete operators immediately, plan-
+                        ning for and entering the deletion of your construct as soon as you dynamically allocate it
+                        on the free store. "
+                    */
+                
+                   // Note:
+
+
+
+    //--------------------------------------------------------------------------------------------
+    // Combinations of Types:
+    //--------------------------------------------------------------------------------------------
+
 
 
 

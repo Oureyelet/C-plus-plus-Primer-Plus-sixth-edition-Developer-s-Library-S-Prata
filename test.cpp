@@ -1,11 +1,20 @@
 #include <iostream>
 #include <cstring> // for strcpy() function
 
+void helloworld();
+
 int main()
 {
-    char waiting[7] = "Monday";
-    
-    std::cout << strlen(waiting) << '\n';
+    helloworld();
+
+    std::cout << hello << '\n';
 
     return 0;
+}
+
+void helloworld()
+{
+    static char hello[]{ "Hello World" };
+
+    std::cout << hello << '\n';
 }
