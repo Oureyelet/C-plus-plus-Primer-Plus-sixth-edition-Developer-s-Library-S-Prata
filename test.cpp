@@ -44,7 +44,7 @@ int main()
 
     ptr_array[1]->year = 3033;
 
-    std::cout << ptr_array[1]->year << '\n';
+    std::cout << (ptr_array+1) << '\n';
 
     return 0;
 }

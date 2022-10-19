@@ -2,7 +2,8 @@
 
 #include <iostream>
 #include <string>   // for string object
-#include <cstring>  // for C-style library   
+#include <cstring>  // for C-style library
+#include <vector>   // for std::vector object
 
 int main()
 {
@@ -1032,7 +1033,7 @@ int main()
 
 
     //--------------------------------------------------------------------------------------------
-    // Combinations of Types:
+    // Combinations of Types: check example here -> "Listing 4.23 mixtypes.cpp"
     //--------------------------------------------------------------------------------------------
 
         /*
@@ -1080,6 +1081,38 @@ int main()
     ptr_array[1]->year = 3033;
 
     std::cout << ptr_array[1]->year << '\n';
+
+    /*We can create a pointer to such an array:*/
+    const antartica_years_end **ptrptr = ptr_array;
+        
+        // or we can use 'auto' instead:
+        auto **ptrptr2 = ptr_array; // "The compiler is perfectly aware of what type ptr_array is, so it can
+                                    // deduce the correct type for you." C++11 automatic type deduction
+    
+
+    /*How can you use ptrptr to access data?*/
+    std::cout << (*ptr_array)->year << '\n';    // member of s01
+    std::cout << (*(ptrptr + 1))->year << '\n'; // is &s02
+
+
+
+    //--------------------------------------------------------------------------------------------
+    // Array Alternatives:
+    //--------------------------------------------------------------------------------------------
+
+
+
+    //--------------------------------------------------------------------------------------------
+    // The vector Template Class:
+    //--------------------------------------------------------------------------------------------
+        // Vector is dynamic array.
+
+    std::vector<int> vi;        // create a zero-size array of int
+    int n3;
+    std::cin >> n3;
+    std::vector<double> vd(n3); // create an array of n3 doubles
+
+
 
     return 0;
 }
